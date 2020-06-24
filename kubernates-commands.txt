@@ -1,0 +1,7 @@
+sudo apt install conntrack
+sudo minikube start --vm-driver=none
+sudo kubectl get nodes
+sudo kubectl get pods
+docker build -t nanoservice .
+kubectl apply -f pod.yml
+kubectl port-forward nanoservice-pod 5000:5000
