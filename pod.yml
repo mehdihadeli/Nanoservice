@@ -6,8 +6,7 @@ metadata:
     name: nanoservice
 spec:
   containers:
-  - name: nanoservice
-    image: nanoservice
-    imagePullPolicy: Never
+  - name: nano-service
+    image: mehdihadeli/nano-service:dev
     ports:
     - containerPort: 5000

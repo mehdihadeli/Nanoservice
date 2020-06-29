@@ -1,7 +1,15 @@
-sudo apt install conntrack
-sudo minikube start --vm-driver=none
+curl -sfL https://get.k3s.io | sh -
 sudo kubectl get nodes
 sudo kubectl get pods
-docker build -t nanoservice .
-kubectl apply -f pod.yml
-kubectl port-forward nanoservice-pod 5000:5000
+--docker build -t nanoservice .
+sudo kubectl apply -f pod.yml
+sudo kubectl port-forward nanoservice-pod 5000:5000  --expose container to outside or world. in real scenario we don't want to expose pod like this with forward and we use services
+sudo kubectl apply -f pod.yml  --for apply changes
+--sudo kubectl delete nanoservice-pod  --for delete pod
+--sudo kubectl describe pod nanoservice-pod
+--sudo kubectl logs nanoservice-pod
+sudo kubectl apply -f service.yml
+--sudo kubectl get services
+--sudo kubectl get svc
+--sudo kubectl cluster-info
+--sudo kubectl get svc nanoservice-svc  --generate a random port in port(s) section to reach it from outside of world.3000+
