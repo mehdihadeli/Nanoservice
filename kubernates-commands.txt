@@ -28,3 +28,7 @@ sudo kubectl set image deployment.v1.apps/nanoservice-dpl nano-service=mehdihade
 sudo kubectl rollout history deployment.v1.apps/nanoservice-dpl 
 sudo kubectl rollout undo deployment.v1.apps/nanoservice-dpl   --to previous revision
 sudo kubectl rollout undo deployment.v1.apps/nanoservice-dpl --to-revision 2   --to specific revision
+
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.3/aio/deploy/recommended.yaml
+kubectl proxy
