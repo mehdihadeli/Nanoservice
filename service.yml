@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: nanoservice-svc
   labels:
-    name: nano-service
+    name: nanoservice
 spec:
   type: NodePort
   ports:
